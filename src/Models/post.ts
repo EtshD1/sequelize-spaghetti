@@ -5,7 +5,7 @@ class Post extends Model {
 	static associate() {}
 
 	toJSON() {
-		return { ...this.get() };
+		return { ...this.get(), id: undefined, owner: undefined };
 	}
 }
 
